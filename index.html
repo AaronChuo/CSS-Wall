@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zhTW">
+<head>
+  <meta charset="UTF-8">
+
+  <!--TODO: OG-->
+
+  <title>CSS Kanban</title>
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body ng-controller="kanbanController as kanban">
+
+  <header id="header">
+    <h1>CSS Kanban</h1>
+    <h2>CSS is Awesome!</h2>
+  </header>
+
+  <section id="wall">
+    <ul>
+      <li class="brick" ng-repeat="brick in kanban.bricks">
+
+      </li>
+    </ul>
+  </section>
+
+  <!--Scripts-->
+  <script src="js/angular.min.js"></script>
+  <script src="js/controllers/kanban.controller.js"></script>
+</body>
+</html>
