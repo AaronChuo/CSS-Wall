@@ -1,10 +1,11 @@
-//--------------------------------------------------------------
-//
-//--------------------------------------------------------------
+/**
+ * @fileoverview App injection.
+ * @author Aaron Chuo
+ */
 'use strict';
 
 angular
-  .module('CSSKanban', [
-    'CSSKanban.controller',
-    'CSSKanban.directive'
+  .module('CSS-Wall', [
+    'CSS-Wall.controller',
+    'CSS-Wall.directive'
   ]);

@@ -8,7 +8,7 @@
 'use strict';
 
 angular
-  .module('CSSKanban.directive', [])
+  .module('CSS-Wall.directive', [])
   .directive('brick', brick);
 
   /** Implement */

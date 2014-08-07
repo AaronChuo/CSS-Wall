@@ -1,32 +1,26 @@
 /**
- * Wall controller
- * inject controller, service, directive modules.
- */
-/**
- * Kanban Controller
- * @desc Controller for kanban view
+ * @fileoverview Wall controller.
  * @author Aaron Chuo
  */
 
 'use strict';
 
 angular
-  .module('CSSKanban.controller', [])
-  .controller('kanbanController', kanbanController);
+  .module('CSS-Wall.controller', [])
+  .controller('wallController', wallController);
 
   /** Injection */
-  kanbanController.$inject = [];
+  wallController.$inject = [];
 
-  function kanbanController() {
+  function wallController() {
     var viewModel = this;
 
-    /** Interface */
-    //for testing
+    /** View model */
     viewModel.bricks = getBrick();
 
     /**
-     * Get all bricks
-     * @returns {Array} bricks
+     * Get all bricks.
+     * @return {Array} bricks
      */
     function getBrick() {
       return [
