@@ -1,4 +1,4 @@
-CSSKanban
+CSS Wall
 =========
 
-CSS Kanban is a wall for css arts.
+CSS Wall is an open project for css arts platform.
