@@ -1,23 +1,38 @@
-//--------------------------------------------------------------
-//
-//--------------------------------------------------------------
+/**
+ * Kanban Controller
+ * @desc Controller for kanban view
+ * @author Aaron Chuo
+ */
+
 'use strict';
 
 angular
-  .module('CSSKanban')
+  .module('CSSKanban.controller', [])
   .controller('kanbanController', kanbanController);
 
+  /** Injection */
   kanbanController.$inject = [];
 
   function kanbanController() {
-    var vm = this;
+    var viewModel = this;
 
-    //-------------------------------------
-    // ViewModel Interface
-    //-------------------------------------
+    /** Interface */
+    //for testing
+    viewModel.bricks = getBrick();
 
-    //-------------------------------------
-    // Implements
-    //-------------------------------------
+    /**
+     * Get all bricks
+     * @returns {Array} bricks
+     */
+    function getBrick() {
+      return [
+        {snapshot: 'http://images.free-extras.com/pics/m/mickey_mouse-1097.jpg', title: 'Mickey', author: 'Disney'},
+        {snapshot: '', title: 'Jedi Master', author: 'StarWars'},
+        {snapshot: '', title: 'Brown', author: 'LINE'},
+        {snapshot: '', title: 'Chopper', author: 'OnePiece'},
+        {snapshot: '', title: 'Agricola', author: 'UweRoseberg'},
+        {snapshot: '', title: 'CrazyChuo', author: 'Aaron'}
+      ];
+    }
 
   }

@@ -5,5 +5,6 @@
 
 angular
   .module('CSSKanban', [
-
+    'CSSKanban.controller',
+    'CSSKanban.directive'
   ]);
