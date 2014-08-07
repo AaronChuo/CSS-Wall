@@ -1,4 +1,8 @@
 /**
+ * Wall controller
+ * inject controller, service, directive modules.
+ */
+/**
  * Kanban Controller
  * @desc Controller for kanban view
  * @author Aaron Chuo
