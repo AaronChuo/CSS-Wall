@@ -1,0 +1,41 @@
+//--------------------------------------------------------------
+// FormComponents
+// Compo: Radio
+// Author: Aaron Chuo
+// Fork: http://aaronchuo.github.io/FormComponents/
+//--------------------------------------------------------------
+.radio-wrapper {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  margin-right: 20px;
+  input[type=radio] {
+    position: absolute;
+    top: -100%;
+    ~ label {
+      @include transition(all ease .3s);
+      padding-right: 80px;
+      &:before {
+        @include psuedo();
+        @include transition(all ease .3s);
+        @include border-radius(50%);
+        @include box-shadow(1px 1px 1px $minorColor inset, 1px 1px 0 5px $basicColor inset);
+        position: absolute;
+        top: 12px;
+        right: 0;
+        width: 20px;
+        height: 20px;
+        border: 1px solid $lightColor;
+        background: $basicColor;
+      }
+    }
+    &:checked ~ label {
+      color: $mainColor;
+      &:before {
+        background: $mainColor;
+      }
+    }
+  }
+}

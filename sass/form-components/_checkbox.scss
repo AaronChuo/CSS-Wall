@@ -1,0 +1,49 @@
+//--------------------------------------------------------------
+// FormComponents
+// Compo: Checkbox
+// Author: Aaron Chuo
+// Fork: http://aaronchuo.github.io/FormComponents/
+//--------------------------------------------------------------
+.checkbox-wrapper {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 46px;
+  margin-right: 20px;
+  input[type=checkbox] {
+    position: absolute;
+    top: -100%;
+    ~ label {
+      @include transition(all ease .3s);
+      padding-right: 80px;
+      &:before {
+        @include psuedo();
+        @include transition(all ease .3s);
+        @include border-radius(3px);
+        @include box-shadow(1px 1px 1px $minorColor inset);
+        position: absolute;
+        top: 12px;
+        right: 0;
+        width: 20px;
+        height: 20px;
+        background: $basicColor;
+      }
+    }
+    &:checked ~ label {
+      color: $mainColor;
+      &:after {
+        @include psuedo();
+        @include transform(rotate(45deg));
+        @include animation(checkbox .15s ease-in-out);
+        border-right: 2px solid $mainColor;
+        border-bottom: 2px solid $mainColor;
+        position: absolute;
+        top: 12px;
+        right: 5px;
+        width: 7px;
+        height: 15px;
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zhTW">
+<html lang="zhTW" ng-app="CSSKanban">
 <head>
   <meta charset="UTF-8">
 
@@ -14,19 +14,31 @@
 
   <header id="header">
     <h1>CSS Kanban</h1>
-    <h2>CSS is Awesome!</h2>
   </header>
 
   <section id="wall">
-    <ul>
-      <li class="brick" ng-repeat="brick in kanban.bricks">
-
-      </li>
-    </ul>
+    <brick ng-repeat="brick in kanban.bricks" snapshot="{{brick.snapshot}}" title="{{brick.title}}" author="{{brick.author}}"></brick>
+    <div class="brick form-components">
+      <!-- <form>
+        <div class="group">
+          <input type="text" id="title" placeholder="Title">
+        </div>
+        <div class="group">
+          <input type="text" id="author" placeholder="Author">
+        </div>
+      </form> -->
+    </div>
   </section>
 
+  <footer id="footer">
+    <p>&copy;2014 Owned by Aaron Chuo.</p>
+    <p><small>CSSKanban is an open source project for css arts.</small></p>
+  </footer>
+
   <!--Scripts-->
-  <script src="js/angular.min.js"></script>
+  <script src="js/libs/angular.min.js"></script>
+  <script src="js/app.js"></script>
   <script src="js/controllers/kanban.controller.js"></script>
+  <script src="js/directives/brick.directive.js"></script>
 </body>
 </html>

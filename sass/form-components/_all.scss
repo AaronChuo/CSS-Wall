@@ -1,0 +1,151 @@
+//--------------------------------------------------------------
+// FormComponents
+// A set of beauty form element by using css and keeping behavior
+// Version: v0.0.1
+// Author: Aaron Chuo
+// Fork: http://aaronchuo.github.io/FormComponents/
+//--------------------------------------------------------------
+@import "animation";
+
+.form-components {
+  color: #333;
+  font-size: 1.4rem;
+
+  input,
+  textarea,
+  select,
+  button {
+    @include box-shadow(none);
+    @include appearance(none);
+    background: none;
+    border: 0;
+    outline: 0;
+  }
+
+  * {
+    @include selection($mainColor);
+  }
+
+  .group {
+    display: block;
+    margin: 10px 0;
+    label {
+      display: inline-block;
+      line-height: 46px;
+      vertical-align: top;
+    }
+    .caption {
+      padding: 0 10px;
+      cursor: default;
+    }
+  }
+
+  //--------------------------------------------------------------
+  // input[type=text]
+  // input[type=email]
+  // input[type=tel]
+  // input[type=url]
+  //--------------------------------------------------------------
+  input[type=text],
+  input[type=email],
+  input[type=tel],
+  input[type=url] {
+    @include box-shadow(1px 1px 1px 0 $minorColor inset);
+    @include border-radius(3px);
+    height: 30px;
+    padding: 10px;
+    background: $basicColor;
+  }
+
+  //--------------------------------------------------------------
+  // input[type=search]
+  //--------------------------------------------------------------
+  input[type=search] {
+
+  }
+
+  //--------------------------------------------------------------
+  // input[type=radio]
+  //--------------------------------------------------------------
+  @import "radio";
+
+  //--------------------------------------------------------------
+  // input[type=checkbox]
+  //--------------------------------------------------------------
+  @import "checkbox";
+
+  //--------------------------------------------------------------
+  // selector
+  //--------------------------------------------------------------
+  @import "selector";
+
+  //--------------------------------------------------------------
+  // textarea
+  //--------------------------------------------------------------
+  .textarea-wrapper {
+
+    span {
+
+    }
+    textarea {
+
+    }
+  }
+
+  //--------------------------------------------------------------
+  // file picker
+  //--------------------------------------------------------------
+  .file-picker {
+
+    span {
+
+    }
+    input[type=file] {
+      outline: none;
+    }
+  }
+
+  //--------------------------------------------------------------
+  // button
+  // input[type=button]
+  // input[type=submit]
+  //--------------------------------------------------------------
+  button {
+
+  }
+
+  input[type=button],
+  input[type=submit] {
+
+  }
+
+  //--------------------------------------------------------------
+  // input[type=number]
+  //--------------------------------------------------------------
+  .number-input-wrapper {
+
+    input[type=number] {
+
+    }
+  }
+
+  //--------------------------------------------------------------
+  // input[type=range]
+  //--------------------------------------------------------------
+  .range-input-wrapper {
+
+    input[type=range] {
+
+    }
+  }
+
+  //--------------------------------------------------------------
+  // *switcher
+  //--------------------------------------------------------------
+  .switcher-wrapper {
+
+    input[type=radio] {
+
+    }
+  }
+}

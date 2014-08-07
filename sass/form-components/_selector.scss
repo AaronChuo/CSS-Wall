@@ -1,0 +1,56 @@
+//--------------------------------------------------------------
+// FormComponents
+// Compo: Selector
+// Author: Aaron Chuo
+// Fork: http://aaronchuo.github.io/FormComponents/
+//--------------------------------------------------------------
+.selector {
+
+  span {
+    display: none;
+  }
+  .selector-wrapper {
+    @include transition(all ease .3s);
+    @include box-shadow(-1px -1px 1px 0 $minorColor inset);
+    @include border-radius(3px);
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 200px;
+    background: $lightColor;
+    select {
+      position: relative;
+      width: 120%;
+      height: 100%;
+      padding: 0 10px;
+      z-index: 99;
+      cursor: pointer;
+    }
+    em {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50px;
+      height: 100%;
+      border-left: 1px solid $grayColor;
+      text-indent: 100%;
+      &:before {
+        @include psuedo();
+        position: relative;
+        margin: 18px auto;
+        width: 0;
+        height: 0;
+        border-top: 10px solid $minorColor;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+      }
+    }
+    &:hover {
+      background: $hoverColor;
+      em:before {
+        @include transition(all ease .3s);
+        border-top-color: $mainColor;
+      }
+    }
+  }
+}

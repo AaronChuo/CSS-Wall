@@ -1,0 +1,17 @@
+//Selection styling
+@mixin selection($backgroundColor, $color: #fff) {
+    &::selection {
+      background: $backgroundColor;
+      color: $color;
+    }
+    &::-moz-selection {
+      background: $backgroundColor;
+      color: $color;
+    }
+}
+
+//Psuedo element initial
+@mixin psuedo($content: '', $display: block) {
+  content: $content;
+  display: $display;
+}
